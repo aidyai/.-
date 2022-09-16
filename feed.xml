@@ -1,30 +1,355 @@
----
-layout: null
----
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
-      <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
-      </item>
-    {% endfor %}
-  </channel>
-</rss>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="description" content="Clicktorelease">
+    <title>Home - Clicktorelease</title>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="/cdn-cgi/apps/head/EQZCnk4gCeNwUQsZ03sLJaa105M.js"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@thespite">
+    <meta name="twitter:title" content="Home - Clicktorelease">
+    <meta name="twitter:description" content="Welcome">
+    <meta name="twitter:creator" content="@thespite">
+    <meta name="twitter:image:src" content="https://www.clicktorelease.com/images/279266954-2048.jpg">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Home - Clicktorelease">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="index.html">
+    <meta property="og:image" content="/images/279266954-2048.jpg">
+    <meta property="og:description" content="Welcome">
+    <meta property="og:site_name" content="Clicktorelease">
+    <meta property="article:published_time" content="2013-09-17T05:59:00+01:00">
+    <meta property="article:modified_time" content="2013-09-16T19:08:47+01:00">
+    <meta property="article:section" content="Article Section">
+    <meta property="article:tag" content="Article Tag">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <script src="/js/theme.js"></script>
+    <link href="/styles/base.css" rel="stylesheet" onload="checkTheme()">
+    <link href="/styles/gallery.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&amp;display=swap" rel="stylesheet">
+    <link rel="modulepreload" href="/js/connection.js">
+    <link rel="modulepreload" href="/js/header.js">
+<link rel="modulepreload" href="/js/image.js">
+  </head>
+  <body class="home animated short">
+    <div id="progress" style="transform: translate(-91.6043%, 0px);"></div>
+    <header>
+  <div class="bar">
+    <div class="main-title">
+      <h1><a href="/">clicktorelease</a></h1>
+      <div class="links"></div>
+    </div>
+    <nav>
+      <a href="/" class="icon home logo"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg></a>
+      <a href="/code/" class="">create</a>
+      <a href="/blog/" class="">write</a>
+      <a href="/talks/" class="">speak</a>
+      <span></span>
+      <a href="https://twitter.com/thespite" aria-label="twitter" title="Follow me on twitter" class="icon twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>Twitter</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg>
+</a>
+      <a href="https://github.com/spite" aria-label="github" title="Check all my open source projects" class="icon github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>GitHub</title><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg></a>
+      <span class="modes">
+        <a href="#" aria-label="light mode" id="toggle-light" title="Switch to light mode" class="icon light-mode"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><rect fill="none" height="24" width="24"></rect><path d="M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0 c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2 c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1 C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06 c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41 l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41 c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36 c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg></a>
+        <a href="#" aria-label="dark mode" id="toggle-dark" title="Switch to dark mode" class="icon dark-mode"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><rect fill="none" height="24" width="24"></rect><path d="M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36c-0.98,1.37-2.58,2.26-4.4,2.26 c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></a>
+      </span>
+    </nav>
+  </div>
+</header>
+
+    <section class="content">
+    <style>
+  .home .block {
+    font-size: var(--text-size);
+    padding: 2em var(--padding) 1em var(--padding);
+    font-family: var(--display-font);
+  }
+  .home .block h1 {
+    color: var(--header-text-color);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    font-size: 1.5em;
+    line-height: 1.1em;
+    margin-bottom: 0.5em;
+  }
+  .home .block h1 b {
+    color: var(--text-color);
+  }
+  .home .block h1 a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  .home .block h1 a:hover {
+    text-decoration: underline;
+  }
+</style>
+<div class="block">
+  <h1>
+    <b>Welcome!</b><br>Here's
+    <b>some of what I <a href="/code/">create</a></b>
+  </h1>
+</div>
+<div class="cards"><a class="card" href="https://spite.github.io/FloatingShinyKnot/" title="Floating Shiny Knot" style="--border-color: #7a8078; color: var(--dark);">
+  <div class="card-background">
+    <c2r-image style="background-color: #7a8078" color="#7a8078" sizes="[2048, 1024, 512]" hash="-870860706"></c2r-image>
+    <noscript>
+      <img src="/images/-870860706.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>0322. Floating Shiny Knot</h2>
+    <h3>A remake of an old experiment to produce <b>image-based global illumination</b> for models using <b>Google Street View panoramas</b>. This is the test for fetching equirectangular panoramas from the google servers.</h3>
+  </div>
+</a>
+<a class="card" href="https://spite.github.io/genuary-2022/" title="Genuary 2022" style="--border-color: #a9aea7; color: var(--light);">
+  <div class="card-background">
+    <c2r-image style="background-color: #a9aea7" color="#a9aea7" sizes="[2048, 1024, 512]" hash="-420338356"></c2r-image>
+    <noscript>
+      <img src="/images/-420338356.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>0122. Genuary 2022</h2>
+    <h3>Entries for Genuary 2022, 31 days of procedural generation with threejs and WebGL.</h3>
+  </div>
+</a>
+<a class="card" href="https://spite.github.io/codevember-2021/" title="Codevember 2021" style="--border-color: #382f3a; color: var(--dark);">
+  <div class="card-background">
+    <c2r-image style="background-color: #382f3a" color="#382f3a" sizes="[2048, 1024, 512]" hash="-852124448"></c2r-image>
+    <noscript>
+      <img src="/images/-852124448.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>1121. Codevember 2021</h2>
+    <h3>Entries for Codevember 2021, 31 days of experiments with WebGL, three.js, simulations and post-processing.</h3>
+  </div>
+</a>
+<a class="card" href="https://vimeo.com/623600913" title="Web Unleashed 2021 Opening Titles" style="--border-color: #7b7a64; color: var(--dark);">
+  <div class="card-background">
+    <c2r-image style="background-color: #7b7a64" color="#7b7a64" sizes="[2048, 1024, 512]" hash="-238589142"></c2r-image>
+    <noscript>
+      <img src="/images/-238589142.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>1021. Web Unleashed 2021 Opening Titles</h2>
+    <h3>Created for the annual FITC Web Unleashed conference.</h3>
+  </div>
+</a>
+<a class="card" href="/code/inktober-2021-attractors-sketch" title="Inktober 2021 Strange Attractor Sketches" style="--border-color: #92848e; color: var(--light);">
+  <div class="card-background">
+    <c2r-image style="background-color: #92848e" color="#92848e" sizes="[2048, 1024, 512]" hash="-466241238"></c2r-image>
+    <noscript>
+      <img src="/images/-466241238.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>1021. Inktober 2021 Strange Attractor Sketches</h2>
+    <h3>All the non photorealistic renders of strange attractors for Inktober 2021.</h3>
+  </div>
+</a>
+<a class="card" href="/code/generative-lines-flow-fields" title="Generative art: Lines on flow fields" style="--border-color: #e9c6bb; color: var(--light);">
+  <div class="card-background">
+    <c2r-image style="background-color: #e9c6bb" color="#e9c6bb" sizes="[2048, 1024, 512]" hash="587179660"></c2r-image>
+    <noscript>
+      <img src="/images/587179660.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>0321. Generative art: Lines on flow fields</h2>
+    <h3>Particles drawing lines on fields of electrical charges.</h3>
+  </div>
+</a>
+<a class="card" href="https://spite.github.io/fuck-2020" title="F*MMXX" style="--border-color: #304158; color: var(--dark);">
+  <div class="card-background">
+    <c2r-image style="background-color: #304158" color="#304158" sizes="[2048, 1024, 512]" hash="248540588"></c2r-image>
+    <noscript>
+      <img src="/images/248540588.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>1220. F*MMXX</h2>
+    <h3>A new year demo to send off this horrible year.</h3>
+  </div>
+</a>
+<a class="card" href="https://spite.github.io/sketch" title="Inktober 2020 Sketch experiments" style="--border-color: #90aea9; color: var(--light);">
+  <div class="card-background">
+    <c2r-image style="background-color: #90aea9" color="#90aea9" sizes="[2048, 1024, 512]" hash="1563885525"></c2r-image>
+    <noscript>
+      <img src="/images/1563885525.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>1020. Inktober 2020 Sketch experiments</h2>
+    <h3>All the sketches for Inktober 2020 simulating ink.</h3>
+  </div>
+</a>
+<a class="card" href="https://spite.github.io/solskogen-2020/player.html" title="Obsolidian" style="--border-color: #1c1e24; color: var(--dark);">
+  <div class="card-background">
+    <c2r-image style="background-color: #1c1e24" color="#1c1e24" sizes="[2048, 1024, 512]" hash="-721673244"></c2r-image>
+    <noscript>
+      <img src="/images/-721673244.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>0620. Obsolidian</h2>
+    <h3>Demo for Solskogen 2020.</h3>
+  </div>
+</a>
+<a class="card" href="https://github.com/spite/FaceMeshFaceGeometry" title="FaceMeshFaceGeometry" style="--border-color: #221a16; color: var(--dark);">
+  <div class="card-background">
+    <c2r-image style="background-color: #221a16" color="#221a16" sizes="[2048, 1024, 512]" hash="720857058"></c2r-image>
+    <noscript>
+      <img src="/images/720857058.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>0520. FaceMesh<wbr>FaceGeometry</h2>
+    <h3>Three.js helper for FaceMesh.</h3>
+  </div>
+</a>
+<a class="card" href="https://ello.co/thespite/post/mzdho1ukmb9k3mwfkrcfea" title="Depth of field experiments - Curl noise" style="--border-color: #14100c; color: var(--dark);">
+  <div class="card-background">
+    <c2r-image style="background-color: #14100c" color="#14100c" sizes="[2048, 1024, 512]" hash="1293347180"></c2r-image>
+    <noscript>
+      <img src="/images/1293347180.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>0320. Depth of field experiments - Curl noise</h2>
+    <h3>Experiments with Depth of Field with an accumulation buffer.</h3>
+  </div>
+</a>
+<a class="card" href="https://ello.co/thespite/post/o9j22ztjvrygiifglhhcdw" title="Particle systems with sphere impostors" style="--border-color: #494238; color: var(--dark);">
+  <div class="card-background">
+    <c2r-image style="background-color: #494238" color="#494238" sizes="[2048, 1024, 512]" hash="-528255276"></c2r-image>
+    <noscript>
+      <img src="/images/-528255276.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>0220. Particle systems with sphere impostors</h2>
+    <h3>Experiments with a particle system that uses sphere impostors, with shading, light, dithered transparency.</h3>
+  </div>
+</a>
+</div>
+<div class="block">
+  <h1>
+    and here's <b>some of what I <a href="/blog/">write about</a></b>
+  </h1>
+</div>
+<div class="cards"><a class="card" href="/blog/optimise-svg-load-service-worker" title="Optimising SVG load with Service Worker" style="--border-color: #dea572; color: var(--light);">
+  <div class="card-background">
+    <c2r-image style="background-color: #dea572" color="#dea572" sizes="[2048, 1024, 512]" hash="1302755743"></c2r-image>
+    <noscript>
+      <img src="/images/1302755743.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>1115. Optimising SVG load with Service Worker</h2>
+    <h3>How to use <b>Service Worker</b> to optimise the loading of <b>SVG</b> assets in a page without altering coding methods.</h3>
+  </div>
+</a>
+<a class="card" href="/blog/calculating-fps-with-requestIdleCallback" title="Calculating FPS past requestAnimationFrame limit with requestIdleCallback" style="--border-color: #3e3f61; color: var(--dark);">
+  <div class="card-background">
+    <c2r-image style="background-color: #3e3f61" color="#3e3f61" sizes="[2048, 1024, 512]" hash="-1274848332"></c2r-image>
+    <noscript>
+      <img src="/images/-1274848332.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>0915. Calculating FPS past requestAnimationFrame limit with requestIdleCallback</h2>
+    <h3>Using requestIdleCallback to calculate FPS more precisely than with requestAnimationFrame.</h3>
+  </div>
+</a>
+<a class="card" href="/blog/svg-google-logo-in-305-bytes" title="Can the new Google logo be 305 bytes?" style="--border-color: #edecec; color: var(--light);">
+  <div class="card-background">
+    <c2r-image style="background-color: #edecec" color="#edecec" sizes="[2048, 1024, 512]" hash="25174163"></c2r-image>
+    <noscript>
+      <img src="/images/25174163.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>0815. Can the new Google logo be 305 bytes?</h2>
+    <h3>Techniques and tricks learned while trying to recreate the new Google logo with <b>SVG</b> in 305 bytes (or less!)</h3>
+  </div>
+</a>
+<a class="card" href="/blog/making-of-cruciform" title="cru·ci·form  study in architecture visualisation" style="--border-color: #353c42; color: var(--dark);">
+  <div class="card-background">
+    <c2r-image style="background-color: #353c42" color="#353c42" sizes="[2048, 1024, 512]" hash="1376687035"></c2r-image>
+    <noscript>
+      <img src="/images/1376687035.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>0215. cru·ci·form  study in architecture visualisation</h2>
+    <h3>Some details on how the project came to be, a bit of technical info and lessons learned on the process.</h3>
+  </div>
+</a>
+<a class="card" href="/blog/creating-spherical-environment-mapping-shader" title="Creating a Spherical Environment Mapping shader" style="--border-color: #412727; color: var(--dark);">
+  <div class="card-background">
+    <c2r-image style="background-color: #412727" color="#412727" sizes="[2048, 1024, 512]" hash="-1312088214"></c2r-image>
+    <noscript>
+      <img src="/images/-1312088214.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>0913. Creating a Spherical Environment Mapping shader</h2>
+    <h3>Creating nice lighting with a simple spherical mapping shader. A step-by-step tutorial on how to create a matcap or litsphere material with GLSL and three.js.</h3>
+  </div>
+</a>
+<a class="card" href="/blog/vertex-displacement-noise-3d-webgl-glsl-three-js" title="Vertex displacement with a noise function using GLSL and three.js" style="--border-color: #553425; color: var(--dark);">
+  <div class="card-background">
+    <c2r-image style="background-color: #553425" color="#553425" sizes="[2048, 1024, 512]" hash="1416430178"></c2r-image>
+    <noscript>
+      <img src="/images/1416430178.jpg" />
+    </noscript>
+  </div>
+  <div class="card-content">
+    <h2>1212. Vertex displacement with a noise function using GLSL and three.js</h2>
+    <h3>Vertex displacement with a noise function using <b>GLSL</b> and <b>three.js</b></h3>
+  </div>
+</a>
+</div>
+
+    </section>
+    <footer>
+  <div class="bar credits">
+    <p><b>Jaume Sanchez Elias</b></p>
+    <p>
+      Web Dev, pixel burner - WebGL · WebXR - UX/UI
+      <a href="https://deepmind.com/">@DeepMind</a>
+    </p>
+  </div>
+  <div class="bar">
+    <div class="links">
+      <a href="https://twitter.com/thespite" class="icon twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>Twitter</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg>
+</a>
+      <a href="https://github.com/spite" class="icon github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>GitHub</title><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg></a>
+      <a href="https://objkt.com/profile/thespi/created" class="icon hen"><svg viewBox="0 0 196.87 53.23"><path d="M228.9,79.31H211.51a2.26,2.26,0,0,1-.35-.34.75.75,0,0,1-.16-.42c0-11.42,0-22.85,0-34.43H193.24v35H175.41V26.27H228.9Z" transform="translate(-32.03 -26.27)"></path><path d="M67.74,43.78V26.42H85.41V79.19H67.91V62.38a4.24,4.24,0,0,0-.52-.57.77.77,0,0,0-.42-.17H50V79.08H32V26.48H49.78v17.3Z" transform="translate(-32.03 -26.27)"></path><path d="M103.62,43.79V26.43h53.6c.09,5.62,0,11.41.05,17.36Z" transform="translate(-32.03 -26.27)"></path><path d="M103.71,61.71h53.38V78.84c-4.05.69-38.16.91-53.38.31Z" transform="translate(-32.03 -26.27)"></path></svg></a>
+      <a href="https://www.youtube.com/user/thespite" class="icon youtube"><svg aria="hidden=&quot;true&quot;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+</a>
+      <a href="https://www.instagram.com/thespite/" class="icon instagram"><svg aria="hidden=&quot;true&quot;" role="img" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"></path></svg>
+</a>
+      <a href="https://codepen.io/spite" class="icon codepen"><svg aria="hidden=&quot;true&quot;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>CodePen</title><path d="M18.144 13.067v-2.134L16.55 12zm1.276 1.194a.628.628 0 01-.006.083l-.005.028-.011.053-.01.031c-.005.016-.01.031-.017.047l-.014.03a.78.78 0 01-.021.043l-.019.03a.57.57 0 01-.08.1l-.026.025a.602.602 0 01-.036.03l-.029.022-.01.008-6.782 4.522a.637.637 0 01-.708 0L4.864 14.79l-.01-.008a.599.599 0 01-.065-.052l-.026-.025-.032-.034-.021-.028a.588.588 0 01-.067-.11l-.014-.031a.644.644 0 01-.017-.047l-.01-.03c-.004-.018-.008-.036-.01-.054l-.006-.028a.628.628 0 01-.006-.083V9.739c0-.028.002-.055.006-.083l.005-.027.011-.054.01-.03a.574.574 0 01.12-.217l.031-.034.026-.025a.62.62 0 01.065-.052l.01-.008 6.782-4.521a.638.638 0 01.708 0l6.782 4.521.01.008.03.022.035.03c.01.008.017.016.026.025a.545.545 0 01.08.1l.019.03a.633.633 0 01.021.043l.014.03c.007.016.012.032.017.047l.01.031c.004.018.008.036.01.054l.006.027a.619.619 0 01.006.083zM12 0C5.373 0 0 5.372 0 12 0 18.627 5.373 24 12 24c6.628 0 12-5.372 12-12 0-6.627-5.372-12-12-12m0 10.492L9.745 12 12 13.51 14.255 12zm.638 4.124v2.975l4.996-3.33-2.232-1.493zm-6.272-.356l4.996 3.33v-2.974l-2.764-1.849zm11.268-4.52l-4.996-3.33v2.974l2.764 1.85zm-6.272-.356V6.41L6.366 9.74l2.232 1.493zm-5.506 1.549v2.134L7.45 12Z"></path></svg>
+</a>
+      <a href="https://ello.co/thespite" class="icon ello"><svg aria="hidden=&quot;true&quot;" role="img" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><title>Ello</title><path d="M12 0C5.377 0 0 5.377 0 12s5.377 12 12 12 12-5.377 12-12S18.623 0 12 0zm6.96 13.8c-.8 3.16-3.68 5.4-6.96 5.4s-6.16-2.24-6.96-5.4c-.08-.36.12-.76.48-.84s.76.12.84.48c.68 2.56 3 4.36 5.64 4.36 2.64 0 4.96-1.8 5.64-4.36.08-.36.48-.6.84-.48.36.08.6.48.48.84z"></path></svg>
+</a>
+      <a href="/rss" class="icon rss"><svg aria="hidden=&quot;true&quot;" role="img" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><title>RSS</title><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"></path></svg>
+</a>
+    </div>
+  </div>
+</footer>
+
+  
+  <script type="module" src="/js/header.js"></script>
+<script type="module" src="/js/image.js"></script>
+  <script src="/js/tweet-button.js" type="module"></script>
+
+</body></html>
